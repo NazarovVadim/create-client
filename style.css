@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 60px;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+  color: #2f2f2f;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+input {
+  border: 1px solid #22b2ea;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 1em;
+}
+
+header {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+#pass-select {
+  padding: 10px;
+  border: none;
+  overflow: hidden;
+  outline: 1px solid #22b2ea;
+}
+#pass-select option {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.med {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .med > div, .med select {
+    flex-basis: 51%;
+    margin: 10px 0 !important;
+  }
+}
+
+#doct-select, #group-select {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  overflow: hidden;
+  outline: 1px solid #22b2ea;
+}
+#doct-select option, #group-select option {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+#doct-select {
+  margin-left: 20px;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-form div {
+  margin-bottom: 10px;
+}
+
+.adress-form div {
+  margin-bottom: 10px;
+}
+
+.pass-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.pass-info select {
+  margin-bottom: 20px;
+}
+
+.pass-add .mb10 {
+  margin-bottom: 10px;
+}
+
+.gender {
+  margin: 0 30px;
+}
+
+#submit {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px 30px;
+  display: inline-block;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  border-radius: 5px;
+  background: #22b2ea;
+  transition: all 0.2s;
+}
+#submit:hover {
+  cursor: pointer;
+}
+#submit:hover::before {
+  animation: move-light 0.6s;
+}
+#submit::before {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateX(-4em) skewX(-45deg);
+}
+
+@keyframes move-light {
+  from {
+    transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    transform: translateX(10em) skewX(-45deg);
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Client Form</title>
+</head>
+<body>
+    <header>Создание клиента</header>
+    <div id="main">
+        <form class="form" id="form">
+            <div class="main-form">
+                <div class="fio">
+                    <input type="text" placeholder="Имя">
+                    <input type="text" placeholder="Фамилия">
+                    <input type="text" placeholder="Отчество">
+                </div>
+                <div class="add-info">
+                    <input type="text" placeholder="Дата рождения">
+                    <input type="text" placeholder="номер телефона">
+                </div>
+                
+                <div class="med">
+                    <select name="group-clients" id="group-select" multiple>
+                        <option value="">VIP</option>
+                        <option value="">Проблемные</option>
+                        <option value="">ОМС</option>
+                    </select>
+                    <div class="gender">
+                        <strong>Пол:</strong> <br> <br>
+                        <input type="radio" name="gender" checked> Мужской <br>
+                        <input type="radio" name="gender"> Женский 
+                    </div>
+                    <select name="doctor" id="doct-select">
+                        <option value="">Лечащий врач</option>
+                        <option value="">Иванов</option>
+                        <option value="">Захаров</option>
+                        <option value="">Чернышева</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <div class="adress-form">
+                <h2>Адрес:</h2>
+                <div class="country">
+                    <input type="text" placeholder="Страна">
+                    <input type="text" placeholder="Область">
+                    <input type="text" placeholder="Город">
+                </div>
+                <div class="city">
+                    <input type="text" placeholder="Улица">
+                    <input type="text" placeholder="Дом">
+                </div>
+            </div>
+            <div class="passport">
+                <h2>Документ</h2>
+                <div class="pass-info">
+                    <select id="pass-select">
+                        <option value="">Вид документа</option>
+                        <option value="Паспорт">Паспорт</option>
+                        <option value="Свидетельство о рождении">Свидетельство о рождении</option>
+                        <option value="Вод. удостоверение">Вод. удостоверение</option>
+                    </select>
+                    <div class="pass-add">
+                        <input type="text" placeholder="Серия" class="mb10">
+                        <input type="text" placeholder="Номер" class="mb10">
+                        <input type="text" placeholder="Кем выдан">
+                        <input type="text" placeholder="Дата выдачи">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button type="submit" form="form" value="Submit" id="submit">Создать</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="./dist/main.js"></script>
+</body>
+</html>
