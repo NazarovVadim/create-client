@@ -8,8 +8,9 @@
     <title>Create Client Form</title>
 </head>
 <body>
-    <header>Создание клиента</header>
+    
     <div id="main">
+        <header>Создание клиента</header>
         <form class="form" id="form">
             <div class="main-form">
                 <div class="fio">
@@ -57,15 +58,17 @@
             <div class="passport">
                 <h2>Документ</h2>
                 <div class="pass-info">
-                    <select id="pass-select">
-                        <option value="">Вид документа</option>
-                        <option value="Паспорт">Паспорт</option>
-                        <option value="Свидетельство о рождении">Свидетельство о рождении</option>
-                        <option value="Вод. удостоверение">Вод. удостоверение</option>
-                    </select>
                     <div class="pass-add">
+                        <select id="pass-select">
+                            <option value="">Вид документа</option>
+                            <option value="Паспорт">Паспорт</option>
+                            <option value="Свидетельство о рождении">Свидетельство о рождении</option>
+                            <option value="Вод. удостоверение">Вод. удостоверение</option>
+                        </select>
                         <input type="text" placeholder="Серия" class="mb10">
                         <input type="text" placeholder="Номер" class="mb10">
+                    </div>
+                    <div class="pass-add">
                         <input type="text" placeholder="Кем выдан">
                         <input type="text" placeholder="Дата выдачи">
                     </div>
