@@ -14,13 +14,13 @@
         <form class="form" id="form">
             <div class="main-form">
                 <div class="fio">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Фамилия">
+                    <strong class="required-field"><input type="text" placeholder="Имя" class=""></strong> 
+                    <strong class="required-field"><input type="text" placeholder="Фамилия"></strong>
                     <input type="text" placeholder="Отчество">
                 </div>
                 <div class="add-info">
-                    <input type="text" placeholder="Дата рождения">
-                    <input type="text" placeholder="номер телефона">
+                    <strong class="required-field"><input type="text" placeholder="Дата рождения"></strong>
+                    <strong class="required-field"><input type="text" placeholder="номер телефона"></strong>
                     <select name="doctor" id="doct-select">
                         <option value="">Лечащий врач</option>
                         <option value="">Иванов</option>
@@ -50,7 +50,7 @@
                 <div class="country">
                     <input type="text" placeholder="Страна">
                     <input type="text" placeholder="Область">
-                    <input type="text" placeholder="Город">
+                    <strong class="required-field"><input type="text" placeholder="Город"></strong>
                 </div>
                 <div class="city">
                     <input type="text" placeholder="Улица">
@@ -61,23 +61,26 @@
                 <h2>Документ</h2>
                 <div class="pass-info">
                     <div class="pass-add">
-                        <select id="pass-select">
-                            <option value="">Вид документа</option>
-                            <option value="Паспорт">Паспорт</option>
-                            <option value="Свидетельство о рождении">Свидетельство о рождении</option>
-                            <option value="Вод. удостоверение">Вод. удостоверение</option>
-                        </select>
+                        <strong class="required-field">
+                            <select id="pass-select">
+                                <option value="">Вид документа</option>
+                                <option value="Паспорт">Паспорт</option>
+                                <option value="Свидетельство о рождении">Свидетельство о рождении</option>
+                                <option value="Вод. удостоверение">Вод. удостоверение</option>
+                            </select>
+                        </strong>
                         <input type="text" placeholder="Серия" class="mb10">
                         <input type="text" placeholder="Номер" class="mb10">
                     </div>
                     <div class="pass-add">
                         <input type="text" placeholder="Кем выдан">
-                        <input type="text" placeholder="Дата выдачи">
+                        <strong class="required-field"><input type="text" placeholder="Дата выдачи"></strong>
                     </div>
                 </div>
             </div>
         </form>
         <button type="submit" form="form" value="Submit" id="submit">Создать</button>
+        <p><input type="checkbox">Не отправлять СМС</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>

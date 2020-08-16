@@ -171,6 +171,15 @@ header
     select
         margin-bottom: 20px
 
+.required-field
+    position: relative
+
+    &::after
+        content: '*'
+        position: absolute
+        right: 8px
+        color: red
+
 .pass-add
     .mb10
         margin-bottom: 10px
