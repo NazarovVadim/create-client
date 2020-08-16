@@ -7,6 +7,8 @@ body {
   max-width: 100%;
   height: 100vh;
   position: relative;
+  align-items: center;
+  justify-content: center;
   font-family: "Roboto", sans-serif;
   color: #2f2f2f;
   overflow-x: hidden;
@@ -75,7 +77,6 @@ header {
 }
 @media (max-width: 952px) {
   .med > div, .med select {
-    flex-basis: 51%;
     margin: 10px 0 !important;
   }
 }
@@ -92,15 +93,7 @@ header {
   font-size: 16px;
 }
 
-#doct-select {
-  margin-left: 20px;
-}
-
 #main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -112,7 +105,7 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 951px) {
+@media (max-width: 1420) {
   .main-form div {
     display: flex;
     align-items: center;
@@ -126,6 +119,27 @@ header {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .main-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-form div input {
+    margin-bottom: 10px;
+  }
+  .main-form .med {
+    flex-direction: column;
+    align-items: start;
+  }
+  .main-form .gender {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main-form .gender strong {
+    flex-basis: 100%;
+  }
+}
 .main-form div {
   margin-bottom: 10px;
 }
@@ -133,7 +147,7 @@ header {
 .adress-form div {
   margin-bottom: 10px;
 }
-@media (max-width: 951px) {
+@media (max-width: 1420) {
   .adress-form div {
     display: flex;
     align-items: center;
@@ -141,13 +155,49 @@ header {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  .adress-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .adress-form div input {
+    margin-bottom: 10px;
+  }
+  .adress-form .med {
+    flex-direction: row;
+  }
+  .adress-form .gender {
+    flex-direction: row;
+  }
+  .adress-form .gender input {
+    margin-left: 20px;
+  }
+}
 
-@media (max-width: 951px) {
+@media (max-width: 1420) {
   .passport div {
     display: flex;
     align-items: center;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .passport div {
+    display: flex;
+    flex-direction: column;
+  }
+  .passport div input {
+    margin-bottom: 10px;
+  }
+  .passport .med {
+    flex-direction: row;
+  }
+  .passport .gender {
+    flex-direction: row;
+  }
+  .passport .gender input {
+    margin-left: 20px;
   }
 }
 

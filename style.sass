@@ -8,6 +8,8 @@ body
     max-width: 100%
     height: 100vh
     position: relative
+    align-items: center
+    justify-content: center
     font-family: 'Roboto', sans-serif
     color: #2f2f2f
     overflow-x: hidden
@@ -60,7 +62,7 @@ header
     flex-wrap: wrap
     @media(max-width: 952px)
         & > div, select 
-            flex-basis: 51%
+            //flex-basis: 51%
             margin: 10px 0 !important
 
 #doct-select, #group-select
@@ -73,14 +75,11 @@ header
         margin-bottom: 5px
         font-size: 16px
 
-#doct-select
-    margin-left: 20px
-
 #main
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%, -50%)
     display: flex
     align-items: center
     flex-direction: column
@@ -92,7 +91,7 @@ header
     display: flex
     flex-direction: column
     justify-content: center
-    @media(max-width: 951px)
+    @media(max-width: 1420)
         div
             display: flex
             align-items: center
@@ -102,26 +101,67 @@ header
             align-items: flex-start
         .gender
             display: block
+    @media(max-width: 768px)
+        div
+            display: flex
+            flex-direction: column
+            input
+                margin-bottom: 10px
+        .med
+            flex-direction: column
+            align-items: start
+        .gender
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            strong
+                flex-basis: 100%
+
+        
     div
         margin-bottom: 10px
 
 .adress-form
     div
         margin-bottom: 10px
-    @media(max-width: 951px)
+    @media(max-width: 1420)
         div
             display: flex
             align-items: center
             flex-direction: column
             align-items: center
+    @media(max-width: 768px)
+        div
+            display: flex
+            flex-direction: column
+            input
+                margin-bottom: 10px
+        .med
+            flex-direction: row
+        .gender
+            flex-direction: row
+            input 
+                margin-left: 20px
 
 .passport
-    @media(max-width: 951px)
+    @media(max-width: 1420)
         div
             display: flex
             align-items: center
             flex-direction: column
             align-items: center
+    @media(max-width: 768px)
+        div
+            display: flex
+            flex-direction: column
+            input
+                margin-bottom: 10px
+        .med
+            flex-direction: row
+        .gender
+            flex-direction: row
+            input 
+                margin-left: 20px
 
 .pass-info
     display: flex
